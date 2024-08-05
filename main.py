@@ -6,7 +6,20 @@ app, rt = fast_app(hdrs=(picolink))
 @rt("/")
 def get():
     return (
+
+
+        Script("window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };"),
+        Script(src="/_vercel/insights/script.js"),
         Script(src="https://cdn.tailwindcss.com"),
+        Script("""
+//import { inject } from '@vercel/analytics';
+        //import { inject } from 'https://cdn.jsdelivr.com/npm/@vercel/analytics@latest/dist/analytics.js';
+        import vercelanalytics from 'https://cdn.jsdelivr.net/npm/@vercel/analytics@1.3.1/+esm'
+console.log(vercelanalytics)
+
+vercelanalytics.inject();
+console.log('penis');
+        """, type="module"),
         Socials(
             title="Vercel + FastHTML + EGGNOG WABAH",
             site_name="Vercel",
