@@ -8,7 +8,7 @@ def get():
     return (
         Script(src="https://cdn.tailwindcss.com"),
         Socials(
-            title="Vercel + FastHTML",
+            title="Vercel + FastHTML + EGGNOG WABAH",
             site_name="Vercel",
             description="A demo of Vercel and FastHTML integration",
             image="https://vercel.fyi/fasthtml-og",
